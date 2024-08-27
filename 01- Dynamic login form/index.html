@@ -1,17 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <head>
 
     </head>
     <main>
-        
+        <!-- <p>Hi ! Less go</p> -->
+        <div class="container">
+
+            <h1>
+                Please Login
+            </h1>
+
+            <form action="" class="loginForm">
+                <!-- here by using form  we have created a container for form elements -->
+                <div class="loginForm">
+                    <label for="email">
+                        Email
+                    </label>
+                    <input type="text" id="email" placeholder="Enter your Email" name="email" required>
+                </div>
+
+                <div class="loginForm">
+                    <label for="password">
+                        Password
+                    </label>
+                    <input type="text" id="password" placeholder="Enter Your Password" name="password" required>
+                </div>
+
+                <div class="loginForm">
+                    <input type="submit" value="Login">
+                </div>
+
+                <p class="text">Don't have an Account? <a href="#">Register</a></a></p>
+            </form>
+        </div>
     </main>
 </body>
+
 </html>
