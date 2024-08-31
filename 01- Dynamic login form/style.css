@@ -6,10 +6,11 @@
     box-sizing: border-box;
 }
 
-.container
+main
 {
     background-color: steelblue;
-    color: #fff;
+    /* with color property we set color of the text */
+    color: #fff; 
     font-family: "Muli", sans-serif;
     margin: 0;
     /* padding: 100px 100px 100px 100px; */
@@ -19,4 +20,43 @@
     justify-content: center;
     height: 100vw;
     overflow: hidden;
+    margin: 0;
+}
+
+.container
+{
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px 40px;
+    border-radius: 8px;
+}
+
+.container h1
+{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.loginForm 
+{
+    padding: 5px;
+    margin: 8px;
+    position: relative;
+}
+
+.loginForm label
+{
+    /* margin-right: 20px; */
+    position: absolute;
+}
+
+.loginForm input
+{
+    background-color: transparent;
+    z-index: 100;
+    display: block;
+    width: 100%;
+    padding: 10px 0px;
+    position: relative;
+    z-index: 100;
+    border-bottom: 2px #fff solid;
 }
