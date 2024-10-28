@@ -1,24 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Number Guessing Game</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="../styles.css" />
-  </head>
-  <body style="background-color: #994545; color: #fff">
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
-        >Youtube channel</a
-      >
-    </nav>
 
-    <h1>Start should change the Background color every second</h1>
-    <button id="start">Start</button>
-    <button id="stop">Stop</button>
-    <script src="script.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Card</title>
+</head>
+
+<body style="background-color:white;">
+
+    <div class="user-info"></div>
+
+</body>
+
+<style>
+    .user-card {
+        width: 300px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        text-align: center;
+        background-color: #f9f9f9;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+    }
+
+    .user-card img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+
+    .user-card h1 {
+        font-size: 1.5em;
+    }
+
+    .user-card p {
+        color: #666;
+    }
+</style>
+f
+
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            const data = JSON.parse(this.responseText);
+
+            // Create card element
+            const card = document.createElement('div');
+            card.classList.add('user-card');
+
+            // Create user image element
+            const usrImg = document.createElement('img');
+            usrImg.src = data.avatar_url;
+
+            // Create followers element
+            const usrFollowers = document.createElement('p');
+            usrFollowers.textContent = `Followers: ${data.followers}`;
+
+            // Append elements to card
+            card.appendChild(usrImg);
+            card.appendChild(usrFollowers);
+
+            // Append card to the DOM
+            document.querySelector('.user-info').appendChild(card);
+        }
+    }
+    xhr.send();
+</script>
+
 </html>
