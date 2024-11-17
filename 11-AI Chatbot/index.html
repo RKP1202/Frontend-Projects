@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+
+    <!-- Linking Google Material Symbols -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .material-symbols-rounded {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 48;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="chatbot-popup">
+        <!-- Header for chatbot -->
+        <div class="chat-header">
+            <div class="header-info">
+                <h2 class="logo-text">Chatbot</h2>
+                <button>
+                    <span class="material-symbols-rounded">keyboard_arrow_down</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="chatbot-body">
+            <div class="message bot-message">
+                <div class="message-text">
+                    Hey there! <br />How can I help you today?
+                </div>
+            </div>
+
+            <div class="message user-message">
+                <div class="message-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, maiores.
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-footer">
+            <form action="#" class="chat-form">
+                <textarea placeholder="Message..." class="message-input"></textarea>
+                <div class="chat-controls">
+                    <button type="button">
+                        <span class="material-symbols-rounded">sentiment_satisfied</span>
+                    </button>
+                    <button type="button">
+                        <span class="material-symbols-rounded">attach_file</span>
+                    </button>
+                    <button type="submit">
+                        <span class="material-symbols-rounded">arrow_upward</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
