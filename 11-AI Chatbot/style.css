@@ -9,4 +9,12 @@
 body{
     display: flex;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000814;
+}
+
+.chatbot-popup{
+    background-color: #ffd60a;
+    padding: 20px;
 }
